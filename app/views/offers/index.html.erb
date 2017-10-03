@@ -7,6 +7,7 @@
     <tr>
       <th>Title</th>
       <th>Decription</th>
+      <th>License</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,6 +17,7 @@
       <tr>
         <td><%= offer.title %></td>
         <td><%= offer.decription %></td>
+        <td><%= offer.license.license_key %></td>
         <td><%= link_to 'Show', offer %></td>
         <td><%= link_to 'Edit', edit_offer_path(offer) %></td>
         <td><%= link_to 'Destroy', offer, method: :delete, data: { confirm: 'Are you sure?' } %></td>

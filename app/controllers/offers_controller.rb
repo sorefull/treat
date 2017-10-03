@@ -15,6 +15,7 @@ class OffersController < ApplicationController
   # GET /offers/new
   def new
     @offer = Offer.new
+    @offer.build_license
   end
 
   # GET /offers/1/edit
@@ -69,6 +70,6 @@ class OffersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def offer_params
-      params.require(:offer).permit(:title, :decription)
+      params.require(:offer).permit(:title, :decription, license_attributes: :license_key)
     end
 end

@@ -21,6 +21,13 @@
     <%= form.text_area :decription, id: :offer_decription %>
   </div>
 
+  <div class="field">
+  <%= form.fields_for :license do |l| %>
+    <%= l.label :license_key, "License key" %>
+    <%= l.text_field :license_key %>
+  <% end %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
