@@ -20,6 +20,7 @@ class OffersController < ApplicationController
 
   # GET /offers/1/edit
   def edit
+    @offer.build_license if @offer.license.blank?
   end
 
   # POST /offers

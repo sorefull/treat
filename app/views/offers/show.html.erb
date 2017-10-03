@@ -12,7 +12,7 @@
 
 <p>
   <strong>License:</strong>
-  <%= @offer.license.license_key %>
+  <%= @offer.license.license_key if @offer.license.present? %>
 </p>
 
 <%= link_to 'Edit', edit_offer_path(@offer) %> |
